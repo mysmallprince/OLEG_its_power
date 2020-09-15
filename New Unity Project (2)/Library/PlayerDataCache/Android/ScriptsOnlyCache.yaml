@@ -1,8 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Cameraplayer
     - Player
     - btn
+    - joke
+    - joke_menu
+    - start
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -26,6 +30,78 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Index.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 15858}
+    - Class: 114
+      Script: {instanceID: 16026}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/Joke.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 20886}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
+      Script: {instanceID: 0}
     Assets/Scenes/Level_!.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -54,23 +130,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12134}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13846}
+      Script: {instanceID: 13850}
     - Class: 114
-      Script: {instanceID: 14490}
+      Script: {instanceID: 14494}
     - Class: 114
-      Script: {instanceID: 15124}
+      Script: {instanceID: 15128}
+    - Class: 114
+      Script: {instanceID: 22558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,7 +272,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 0671f03d4408464342451f77215e21c7
+      Hash: c19d8d1ee7fa00973d15befc986549b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -582,8 +660,33 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: start
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: joke
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: joke_menu
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Cameraplayer
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Index.unity
   - Assets/Scenes/Level_!.unity
-  playerPath: "F:/\u041C\u043E\u0451 \u043F\u043E\u0440\u0442\u0444\u043E\u043B\u0438\u043E/OLEG/OLEG_its_power/New
-    Unity Project (2)/OLEGLOVE_1.apk"
+  - Assets/Scenes/Joke.unity
+  playerPath: C:/Users/fadie/Games/OLEG_its_power/New Unity Project (2)/OLEGLOVE.apk

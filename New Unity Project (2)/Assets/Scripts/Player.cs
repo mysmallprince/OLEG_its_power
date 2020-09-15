@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     public GameObject btnLeft;
     public GameObject btnRight;
+    public GameObject Jump;
+    float PosJump;
     float PosBtnLeft;
     float PosBtnRight;
     float run;
@@ -17,7 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
+        PosJump = Jump.transform.position.y;
         PosBtnLeft = btnLeft.transform.position.y;
         PosBtnRight = btnRight.transform.position.y;
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
+        if (PosJump != Jump.transform.position.y)
+        {
+            rb.AddForce(transform.up * 1f, ForceMode2D.Impulse);
+        }
+
+
+
         if (PosBtnLeft != btnLeft.transform.position.y)
         {
             run = -3f;

@@ -173,7 +173,7 @@ PlayerSettings:
   applicationIdentifier: {}
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 19
+  AndroidMinSdkVersion: 20
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -249,8 +249,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: c6d00a6259fa0aa4bab4e523a91201c5, type: 3}
-  AndroidKeystoreName: '{inproject}: user.keystore'
-  AndroidKeyaliasName: oleg it's oleg
+  AndroidKeystoreName: '{inproject}: user2.keystore'
+  AndroidKeyaliasName: oleglove
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
