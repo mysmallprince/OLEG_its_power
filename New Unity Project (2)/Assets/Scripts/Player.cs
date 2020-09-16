@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     float PosBtnLeft;
     float PosBtnRight;
     float run;
+    float k;
 
 
     void Start()
@@ -32,7 +34,9 @@ public class Player : MonoBehaviour
 
         if (PosJump != Jump.transform.position.y)
         {
-            rb.AddForce(transform.up * 1f, ForceMode2D.Impulse);
+            k = ((transform.localEulerAngles.z < 45) || (transform.localEulerAngles.z > -45)) ? -1f : 1f;
+            k = ((transform.localEulerAngles.z > 60) || (transform.localEulerAngles.z < -60)) ? -1f : 1f;
+            rb.AddForce(transform.up * k, ForceMode2D.Impulse);
         }
 
 
