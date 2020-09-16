@@ -34,8 +34,7 @@ public class Player : MonoBehaviour
 
         if (PosJump != Jump.transform.position.y)
         {
-            k = ((transform.localEulerAngles.z < 45) || (transform.localEulerAngles.z > -45)) ? -1f : 1f;
-            k = ((transform.localEulerAngles.z > 60) || (transform.localEulerAngles.z < -60)) ? -1f : 1f;
+            k = ((transform.localEulerAngles.z > 45) || (transform.localEulerAngles.z < -45)) ? -2f : 2f;
             rb.AddForce(transform.up * k, ForceMode2D.Impulse);
         }
 
