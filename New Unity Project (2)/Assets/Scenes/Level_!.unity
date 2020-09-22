@@ -2103,6 +2103,10 @@ PrefabInstance:
       propertyPath: Jump
       value: 
       objectReference: {fileID: 577837274}
+    - target: {fileID: 5107041996952783734, guid: 463eef47ba5a71e49b22f2a6f3fd10ef, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5107041996952783735, guid: 463eef47ba5a71e49b22f2a6f3fd10ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.32

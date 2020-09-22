@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     float PosBtnRight;
     float run;
     float k;
+	float p;
 
 
     void Start()
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (PosJump != Jump.transform.position.y)
         {
-            k = ((transform.localEulerAngles.z > 45) || (transform.localEulerAngles.z < -45)) ? -2f : 2f;
+			k = ((transform.rotation.z < -100 && transform.rotation.z > -180) || (transform.rotation.z > 100 && transform.rotation.z < 180 ) && (transform.rotation.z < 1 && transform.rotation.z > 80) || (transform.rotation.z > -1 && transform.rotation.z < -80 )) ? 2f : -2f;
             rb.AddForce(transform.up * k, ForceMode2D.Impulse);
         }
 
