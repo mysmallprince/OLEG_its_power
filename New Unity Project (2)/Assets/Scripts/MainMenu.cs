@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public Button Level2B;
     public Button Level3B;
+    public Button Level4B;
     int levelComplete;
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour
         levelComplete = PlayerPrefs.GetInt("LevelComplete");
         Level2B.interactable = false;
         Level3B.interactable = false;
+        Level4B.interactable = false;
 
         switch (levelComplete)
         {
@@ -25,6 +27,11 @@ public class MainMenu : MonoBehaviour
             case 2:
                 Level2B.interactable = true;
                 Level3B.interactable = true;
+                break;
+            case 3:
+                Level2B.interactable = true;
+                Level3B.interactable = true;
+                Level4B.interactable = true;
                 break;
         }
 

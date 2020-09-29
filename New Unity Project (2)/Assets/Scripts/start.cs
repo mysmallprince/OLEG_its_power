@@ -7,6 +7,6 @@ public class start : MonoBehaviour
 {
     void OnMouseDown()
     {
-        SceneManager.LoadScene ("Level_!");
+        SceneManager.LoadScene ("1LevelB");
     }
 }

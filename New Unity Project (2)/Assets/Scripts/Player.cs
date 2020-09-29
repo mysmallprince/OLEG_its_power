@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,12 +13,13 @@ public class Player : MonoBehaviour
     public GameObject btnLeft;
     public GameObject btnRight;
     public GameObject Jump;
+    public GameObject Back;
+    float PosBack;
     float PosJump;
     float PosBtnLeft;
     float PosBtnRight;
     float run;
     float k;
-	float p;
 
 
     void Start()
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
         PosJump = Jump.transform.position.y;
         PosBtnLeft = btnLeft.transform.position.y;
         PosBtnRight = btnRight.transform.position.y;
+        PosBack = Back.transform.position.y;
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -33,9 +36,14 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+        if (PosBack != Back.transform.position.y){
+
+            SceneManager.LoadScene("Index");
+        }
+
         if (PosJump != Jump.transform.position.y)
         {
-			k = ((transform.rotation.z < -100 && transform.rotation.z > -180) || (transform.rotation.z > 100 && transform.rotation.z < 180 ) && (transform.rotation.z < 1 && transform.rotation.z > 80) || (transform.rotation.z > -1 && transform.rotation.z < -80 )) ? 2f : -2f;
+			k = ((transform.rotation.z < -100 && transform.rotation.z > -180) || (transform.rotation.z > 100 && transform.rotation.z < 180 )) ? -3f : 3f;
             rb.AddForce(transform.up * k, ForceMode2D.Impulse);
         }
 
