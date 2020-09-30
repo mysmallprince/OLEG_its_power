@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
-
+    public int score = 0;
     public GameObject btnLeft;
     public GameObject btnRight;
     public GameObject Jump;
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     float PosBtnRight;
     float run;
     float k;
+    int sceneIndex;
+    
 
 
     void Start()
@@ -29,12 +31,20 @@ public class Player : MonoBehaviour
         PosBtnRight = btnRight.transform.position.y;
         PosBack = Back.transform.position.y;
         rb = GetComponent<Rigidbody2D>();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
 
     }
 
 
     void Update()
     {
+
+        if (transform.position.x < -23 || transform.position.x > 63 || transform.position.y < -6 || transform.position.y > 11 ){
+            SceneManager.LoadScene (sceneIndex);
+        }
+
+
+        
 
         if (PosBack != Back.transform.position.y){
 
@@ -65,5 +75,11 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(run, rb.velocity.y);
+    }
+    public void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.CompareTag("coin")){
+            Destroy (other.gameObject);
+            score++;
+        }
     }
 }

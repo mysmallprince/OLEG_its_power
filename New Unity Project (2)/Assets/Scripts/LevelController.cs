@@ -29,7 +29,7 @@ public class LevelController : MonoBehaviour
     {
         if (sceneIndex == 6)
         {
-            Invoke("MainMenu", 1f);
+            Invoke("LoadMainMenu", 1f);
         }
         else
         {
