@@ -8,7 +8,11 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
+    int selectidskin;
+    public Sprite standart;
+    public Sprite duck;
+    public Sprite superduck;
+    public SpriteRenderer sr;
     Rigidbody2D rb;
     public Text Money;
     int score;
@@ -25,6 +29,19 @@ public class Player : MonoBehaviour
     int sceneIndex;
     void Start()
     {
+        selectidskin = PlayerPrefs.GetInt("SelSkin");
+        if(selectidskin == 0)
+        {
+            sr.sprite = standart;
+        }
+        if(selectidskin == 1)
+        {
+            sr.sprite = duck;
+        }
+        if(selectidskin == 2)
+        {
+            sr.sprite = superduck;
+        }
         score = PlayerPrefs.GetInt("money");
         Money.text = score.ToString();
         if(Advertisement.isSupported)
