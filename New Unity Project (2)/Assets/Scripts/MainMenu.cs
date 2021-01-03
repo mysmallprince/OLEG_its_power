@@ -21,14 +21,14 @@ public class MainMenu : MonoBehaviour
 
         switch (levelComplete)
         {
-            case 1:
+            case 3:
                 Level2B.interactable = true;
                 break;
-            case 2:
+            case 4:
                 Level2B.interactable = true;
                 Level3B.interactable = true;
                 break;
-            case 3:
+            case 5:
                 Level2B.interactable = true;
                 Level3B.interactable = true;
                 Level4B.interactable = true;
@@ -49,6 +49,11 @@ public class MainMenu : MonoBehaviour
         Level2B.interactable = false;
         Level3B.interactable = false;
         PlayerPrefs.DeleteAll();
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("Index");
     }
 
 }
