@@ -50,9 +50,8 @@
      <Compile Include="Assets\Scripts\joke_menu.cs" />
      <Compile Include="Assets\Scripts\btn.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Shop.cs" />
      <Compile Include="Assets\Scripts\Smoke.cs" />
-     <Compile Include="Assets\Scripts\joke.cs" />
-     <Compile Include="Assets\Scripts\start.cs" />
      <Compile Include="Assets\Scripts\Cameraplayer.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\choose.cs" />

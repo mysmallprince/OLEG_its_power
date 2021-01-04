@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Shop : MonoBehaviour
@@ -150,8 +151,8 @@ public class Shop : MonoBehaviour
     }
 
     
-    void Update()
+    public void GotoMenu()
     {
-        
+        SceneManager.LoadScene("Index");
     }
 }
